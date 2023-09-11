@@ -1,0 +1,505 @@
+/* Base Styles */
+body {
+    background-image: url("bg.svg");
+    margin: 15px;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    user-select: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    user-select: none;
+    margin-left: 20px;
+
+}
+
+.task-name {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+}
+
+.tag {
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+
+}
+
+
+/* Big Box */
+.big-box {
+    background-image: url("taskbox.png");
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.021), rgba(255, 255, 255, 0.1));
+    padding: 50px;
+    margin: 35px 50px 15px 180px;
+    box-shadow: 0 0 50px rgba(3, 2, 24, 0.1);
+    height: 380px;
+    overflow: auto;
+    border-radius: 10px;
+    width: 900px;
+    position: relative;
+    /* Customize the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(255, 255, 255, 0.1);
+    margin-top: -20px;
+    max-width: 100%;
+}
+
+
+/* Scroll Bar */
+
+.big-box::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar track */
+}
+
+.big-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Color of the thumb */
+    border-radius: 10px;
+    /* Border radius of the thumb */
+}
+
+.big-box::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(11, 72, 70, 0.4);
+    /* Color of the thumb on hover */
+}
+
+.big-box::-webkit-scrollbar-track {
+    background-color: rgba(31, 219, 212, 0.41);
+    /* Color of the track */
+    border-radius: 10px;
+    /* Border radius of the track */
+}
+
+.big-box::-webkit-scrollbar-corner {
+    background-color: transparent;
+    /* Color of the corner where the two scrollbars meet */
+}
+
+
+
+
+/* Task Container */
+.task-container {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.397));
+    display: flex;
+    align-items: center;
+    width: 390px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    flex: 1;
+}
+
+.check {
+    margin-right: 10px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.task-flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    transition: 0.2s ease, color 0.2s ease;
+}
+
+
+
+/* Checkbox */
+.striketask-checkbox {
+    display: none;
+    cursor: pointer;
+}
+
+.striketask-label {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("checkbox-before.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.6s ease;
+}
+
+.striketask-checkbox:checked+.striketask-label {
+    background-image: url("checkbox-after.svg");
+}
+
+/* Dropdown */
+.hidden {
+    display: none;
+}
+
+summary {
+    list-style: none;
+    padding-left: 0;
+    cursor: pointer;
+    width: 18.13px;
+}
+
+.dropdown-content {
+    user-select: none;
+    position: absolute;
+    left: 250px;
+    top: 130px;
+    display: none;
+    background-color: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.397));
+    display: flex;
+    align-items: center;
+    width: 480px;
+    border-radius: 10px;
+
+}
+
+details[open] .dropdown-content {
+    display: block;
+
+}
+
+details[open] .big-box {
+    padding-bottom: 50px;
+}
+
+
+
+/* Task Button & Contents */
+.taskbutton:focus {
+    outline: none;
+}
+
+.prioritybutton {
+    border-radius: 80px;
+    padding: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: #c1e6df;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 0;
+    padding-bottom: 5px;
+
+    /* Hide text on the button */
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 105px;
+    /* Adjust the left position as needed */
+    transform: translateY(-50%);
+    color: #5f958c;
+    z-index: 2;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.prioritybutton option {
+    font-size: 15px;
+}
+
+.task-input {
+    border-radius: 10px;
+    width: 160px;
+    height: 25px;
+    background-color: rgb(241, 255, 255);
+}
+
+.taginput {
+    border-radius: 10px;
+    height: 20px;
+    width: 110px;
+    background-color: rgb(241, 255, 255);
+}
+
+.taskbutton {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-left: 160px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-image: url("taskbutton.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.taskbutton2 {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 82px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(127, 170, 152, 0.34), rgba(255, 255, 255, 0.397));
+    border: 1px solid #7a7a7a;
+
+}
+
+.form {
+    width: 440px;
+    margin: 0px;
+    padding: 10px 0px 10px 10px;
+
+
+
+}
+
+.dropdown-content form,
+.dropdown-content select,
+.dropdown-content input {
+    margin-right: 10px;
+    /* Add margin to separate form elements */
+}
+
+
+
+
+
+/* Priority */
+.priority-indicator {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.priority-indicator.high {
+    background-color: red;
+}
+
+.priority-indicator.medium {
+    background-color: orange;
+}
+
+.priority-indicator.low {
+    background-color: green;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+    width: 8px;
+}
+
+/* Delete Button */
+.delete-form {
+    display: inline-block;
+    margin-left: auto;
+    margin-left: 20px;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: rgb(1, 82, 67);
+    cursor: pointer;
+}
+
+/* Task Boxes and Tags */
+.task-boxes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.task-tags {
+    position: absolute;
+    bottom: -9.5px;
+    right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+
+}
+
+.tag {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.158));
+    flex-grow: 1;
+    /* Allow the tag to grow to fill available space */
+    min-width: 0;
+    /* Reset the minimum width */
+    white-space: nowrap;
+    /* Prevent tag content from wrapping */
+
+}
+
+.task-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    p {
+        margin-left: 10px;
+    }
+
+    .big-box {
+        padding: 20px;
+        /* Decrease padding for smaller screens */
+        font-size: 16px;
+        /* Adjust font size for better readability */
+        margin: 20px;
+        margin-top: 70px;
+        width: auto;
+        position: relative;
+
+    }
+
+    .task-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .task-name {
+        font-size: 18px;
+        /* Adjust font size for task names */
+    }
+
+    .task-container {
+        width: 350px;
+        /* Expand task container to full width for better spacing */
+    }
+
+    .taskbutton {
+        margin-left: 0;
+        /* Remove margin-left to keep the button on the left edge */
+        position: absolute;
+        top: 150px;
+        left: 30px;
+    }
+
+    .tag {
+        font-size: 10px;
+        /* Adjust font size for tags */
+    }
+
+    .prioritybutton {
+        font-size: 12px;
+        /* Adjust font size for priority button */
+    }
+
+    .icon {
+        left: 80px;
+        /* Adjust the icon's left position */
+        font-size: 20px;
+        /* Adjust icon's font size */
+    }
+
+    .delete-form {
+        display: inline-block;
+        margin-right: 50px;
+
+    }
+
+    /* ... other adjustments ... */
+}
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+
+    /* Adjust your styles here */
+    h1 {
+        margin-left: 15px;
+    }
+
+    p {
+        margin-left: 15px;
+    }
+
+    .big-box {
+        padding: 15px;
+        /* Decrease padding for smaller screens */
+        font-size: 16px;
+        /* Adjust font size for better readability */
+        margin: 20px;
+        margin-top: 70px;
+        width: auto;
+        position: relative;
+
+    }
+
+    .task-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+
+    }
+
+    .task-name {
+        font-size: 18px;
+        /* Adjust font size for task names */
+    }
+
+    .task-container {
+        width: 205px;
+        /* Expand task container to full width for better spacing */
+    }
+
+    .taskbutton {
+        margin-left: 0;
+        /* Remove margin-left to keep the button on the left edge */
+        position: absolute;
+        top: 150px;
+        left: 30px;
+    }
+
+    .tag {
+        font-size: 10px;
+        /* Adjust font size for tags */
+    }
+
+    .prioritybutton {
+        font-size: 12px;
+        /* Adjust font size for priority button */
+    }
+
+    .icon {
+        left: 80px;
+        /* Adjust the icon's left position */
+        font-size: 20px;
+        /* Adjust icon's font size */
+    }
+
+    .delete-form {
+        display: inline-block;
+        margin-right: 15px;
+
+    }
+}

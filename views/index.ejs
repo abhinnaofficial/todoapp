@@ -1,0 +1,134 @@
+<%- include("partials/header.ejs") %>
+
+    <h1>Today's Task</h1>
+    <p>
+        <%= formatDate(new Date()) %>
+
+    </p>
+
+
+
+    <details>
+        <summary><i class="taskbutton"></i></i></summary>
+        <div class="dropdown-content">
+            <form class="form" action="/create" method="POST">
+
+
+                <input class="taskbutton2" type="submit" name="newTaskButton" value="Add Task">
+
+                <i class="fas fa-circle-chevron-down icon"
+                    style="--fa-primary-color: #5f958c; --fa-secondary-color: #9bd9cf;"></i>
+                <select class="prioritybutton" name="priority" id="priority">
+                    <option value="" disabled selected>Select Priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+
+
+                </select>
+
+                <input class="task-input" type="text" name="taskName" placeholder="Task name">
+                <!-- Add this input field to your form -->
+                <input class="taginput" type="text" name="tags" placeholder="Add tags">
+            </form>
+        </div>
+    </details>
+
+    <div class="big-box">
+        <div class="task-boxes">
+            <% for (let i=0; i < tasks.length; i++) { %>
+
+                <div class="task-box" data-category="<%= tasksCategory[i] %>">
+                    <!-- ... display task details ... -->
+                    <p>
+
+                    <form action="/toggle" method="post">
+
+                        <input type="hidden" name="index" value="<%= i %>">
+
+
+
+                        <!-- created checkbox before the tasks[i]. id=taskid-i which labels takes reference to know when the task is completed. onchange="this.form.submit() to trigger the toggle route in node. <tasksCompleted[i] ? 'checked' : '' %> IF the toggle route returns completed, then the checkbox shows check in it. -->
+                        <div class="task-flex-container">
+
+                            <input type="checkbox" id="taskid<%= i %>" class="striketask-checkbox check" name="checkbox"
+                                onchange="this.form.submit()" <%=tasksCompleted[i] ? 'checked' : '' %>>
+                            <!-- label to display the created task, add css if task completed. taskid=i to connect it to input element -->
+                            <label id="strike" class="striketask-label <%= tasksCompleted[i] ? 'completed' : '' %>"
+                                for="taskid<%= i %>">
+                            </label>
+
+
+                            <div class="task-container">
+                                <span class="task-name <%=tasksCompleted[i] ? 'completed' : '' %>"
+                                    contenteditable="true" onfocusout="saveTask(<%= i %>, this.innerHTML)">
+                                    <%= tasks[i] %>
+
+                                </span>
+
+                                <span class="priority-indicator <%= tasksPriority[i] %>"></span>
+                                <!-- Display priority indicator -->
+
+                                <div class="task-tags">
+
+                                    <% if (tasksTags[i].length> 0) { %>
+                                        <div class="task-tags">
+                                            <% tasksTags[i].forEach(tag=> { %>
+                                                <span class="tag">#<%= tag %></span>
+                                                <% }); %>
+                                        </div>
+                                        <% }; %>
+                                </div>
+                            </div>
+
+
+                    </form>
+
+
+
+
+
+
+                </div>
+
+
+                <!-- Delete button -->
+                <form action="/delete" method="post" class="delete-form">
+                    <input type="hidden" name="index" value="<%= i %>">
+                    <button type="submit" class="delete-button"><span
+                            class="material-symbols-outlined">&#xe872;</span></i>
+                    </button>
+                </form>
+        </div>
+
+        <% } %>
+
+    </div>
+
+
+
+    </div>
+    </div>
+
+
+
+    <script>
+        async function saveTask(index, newTaskName) {
+            const url = `/edit?index=${index}&newTaskName=${encodeURIComponent(newTaskName)}`;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    console.log('Task updated successfully');
+                    location.reload(); // Reload the page after successful task update
+                } else {
+                    console.error('Error updating task');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
