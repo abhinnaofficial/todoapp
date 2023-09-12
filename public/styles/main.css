@@ -555,7 +555,7 @@ details[open] .big-box {
 
     .icon {
         position: absolute;
-        top: 40.5%;
+        top: 40%;
         left: 105px;
         /* Adjust the left position as needed */
         transform: translateY(-50%);
