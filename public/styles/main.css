@@ -153,7 +153,9 @@ summary {
     list-style: none;
     padding-left: 0;
     cursor: pointer;
-    width: 18.13px;
+    width: 0px;
+
+
 }
 
 .dropdown-content {
