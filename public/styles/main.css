@@ -456,7 +456,7 @@ details[open] .big-box {
 
 
 /* Media query for mobile devices */
-@media screen and (max-width: 490px) {
+@media screen ad (min-device-width : 320px) and (max-width: 490px) {
 
     /* Adjust your styles here */
     h1 {
