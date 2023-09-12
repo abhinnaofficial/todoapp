@@ -468,7 +468,7 @@ details[open] .big-box {
     }
 
     summary {
-        list-style: none;
+        list-style: none !important;
         width: 0px;
     }
 
@@ -523,7 +523,7 @@ details[open] .big-box {
 
     .task-input {
         border-radius: 10px;
-        width: 100px;
+        width: 80px;
         height: 25px;
         background-color: rgb(241, 255, 255);
     }
@@ -535,7 +535,7 @@ details[open] .big-box {
     .taginput {
         border-radius: 10px;
         height: 20px;
-        width: 60px;
+        width: 50px;
         background-color: rgb(241, 255, 255);
     }
 
@@ -553,7 +553,7 @@ details[open] .big-box {
 
     .icon {
         position: absolute;
-        top: 42%;
+        top: 40%;
         left: 105px;
         /* Adjust the left position as needed */
         transform: translateY(-50%);
