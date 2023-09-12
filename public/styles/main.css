@@ -431,7 +431,7 @@ details[open] .big-box {
 
     .dropdown-content {
         left: 100px;
-        top: 130px;
+        top: 160px;
 
     }
 
@@ -543,6 +543,7 @@ details[open] .big-box {
 
     .dropdown-content {
         width: 348px;
+        top: 163px;
     }
 
 
