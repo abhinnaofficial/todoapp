@@ -375,6 +375,7 @@ details[open] .big-box {
 
     .big-box {
         padding: 20px;
+        padding-left: 0px;
         /* Decrease padding for smaller screens */
         font-size: 16px;
         /* Adjust font size for better readability */
