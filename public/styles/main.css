@@ -154,7 +154,7 @@ summary {
     padding-left: 0;
     cursor: pointer;
     width: 0px;
-
+    margin-left: -100px;
 
 }
 
@@ -177,6 +177,7 @@ summary {
 
 details[open] .dropdown-content {
     display: block;
+    list-style: none;
 
 }
 
@@ -239,7 +240,7 @@ details[open] .big-box {
 .taskbutton {
     margin-right: 12px;
     margin-bottom: 12px;
-    margin-left: 160px;
+    margin-left: 250px;
     cursor: pointer;
     display: inline-block;
     width: 100px;
@@ -409,7 +410,7 @@ details[open] .big-box {
     .taskbutton {
         margin-right: 12px;
         margin-bottom: -80px;
-        margin-left: 20px;
+        margin-left: 100px;
         cursor: pointer;
         display: inline-block;
         width: 100px;
@@ -509,7 +510,7 @@ details[open] .big-box {
     .taskbutton {
         margin-right: 12px;
         margin-bottom: -80px;
-        margin-left: 20px;
+        margin-left: 90px;
         cursor: pointer;
         display: inline-block;
         width: 100px;
@@ -553,7 +554,7 @@ details[open] .big-box {
 
     .icon {
         position: absolute;
-        top: 40%;
+        top: 41%;
         left: 105px;
         /* Adjust the left position as needed */
         transform: translateY(-50%);
