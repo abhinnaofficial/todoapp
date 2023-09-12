@@ -46,7 +46,6 @@ p {
     border-radius: 10px;
     width: 996px;
     position: relative;
-    /* Customize the scrollbar */
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) rgba(255, 255, 255, 0.1);
     margin-top: -20px;
@@ -58,31 +57,24 @@ p {
 
 .big-box::-webkit-scrollbar {
     width: 8px;
-    /* Width of the scrollbar track */
 }
 
 .big-box::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
-    /* Color of the thumb */
     border-radius: 10px;
-    /* Border radius of the thumb */
 }
 
 .big-box::-webkit-scrollbar-thumb:hover {
     background-color: rgba(11, 72, 70, 0.4);
-    /* Color of the thumb on hover */
 }
 
 .big-box::-webkit-scrollbar-track {
     background-color: rgba(31, 219, 212, 0.41);
-    /* Color of the track */
     border-radius: 10px;
-    /* Border radius of the track */
 }
 
 .big-box::-webkit-scrollbar-corner {
     background-color: transparent;
-    /* Color of the corner where the two scrollbars meet */
 }
 
 
@@ -203,15 +195,12 @@ details[open] .big-box {
     -moz-appearance: none;
     font-size: 0;
     padding-bottom: 5px;
-
-    /* Hide text on the button */
 }
 
 .icon {
     position: absolute;
     top: 50%;
     left: 105px;
-    /* Adjust the left position as needed */
     transform: translateY(-50%);
     color: #5f958c;
     z-index: 2;
@@ -273,7 +262,6 @@ details[open] .big-box {
 .dropdown-content select,
 .dropdown-content input {
     margin-right: 10px;
-    /* Add margin to separate form elements */
 }
 
 
@@ -345,11 +333,8 @@ details[open] .big-box {
     border-radius: 4px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.158));
     flex-grow: 1;
-    /* Allow the tag to grow to fill available space */
     min-width: 0;
-    /* Reset the minimum width */
     white-space: nowrap;
-    /* Prevent tag content from wrapping */
 
 }
 
@@ -376,9 +361,7 @@ details[open] .big-box {
     .big-box {
         padding: 20px;
         padding-left: 0px;
-        /* Decrease padding for smaller screens */
         font-size: 16px;
-        /* Adjust font size for better readability */
         margin: 20px;
         margin-top: 70px;
         width: auto;
@@ -396,7 +379,6 @@ details[open] .big-box {
 
     .task-name {
         font-size: 18px;
-        /* Adjust font size for task names */
     }
 
     .task-boxes {
@@ -405,7 +387,6 @@ details[open] .big-box {
 
     .task-container {
         width: 240px;
-        /* Expand task container to full width for better spacing */
     }
 
     .taskbutton {
@@ -420,7 +401,6 @@ details[open] .big-box {
 
     .tag {
         font-size: 10px;
-        /* Adjust font size for tags */
     }
 
 
@@ -440,7 +420,6 @@ details[open] .big-box {
         position: absolute;
 
         left: 105px;
-        /* Adjust the left position as needed */
         transform: translateY(-50%);
         color: #5f958c;
         z-index: 2;
@@ -455,17 +434,17 @@ details[open] .big-box {
 
 
     .material-symbols-outlined {
-        margin-left: -18px;
+        margin-left: -20px;
     }
 
-    /* ... other adjustments ... */
+
 }
 
 
 /* Media query for mobile devices */
 @media screen and (min-device-width : 320px) and (max-width: 490px) {
 
-    /* Adjust your styles here */
+
     h1 {
         margin-left: 15px;
     }
@@ -486,13 +465,12 @@ details[open] .big-box {
 
     .big-box {
         padding: 15px;
-        /* Decrease padding for smaller screens */
         font-size: 16px;
-        /* Adjust font size for better readability */
         margin: 20px;
         margin-top: 70px;
         width: auto;
         position: relative;
+        padding-left: 0px;
 
     }
 
@@ -509,12 +487,12 @@ details[open] .big-box {
 
     .task-name {
         font-size: 18px;
-        /* Adjust font size for task names */
+
     }
 
     .task-container {
         width: 180px;
-        /* Expand task container to full width for better spacing */
+
     }
 
     .taskbutton {
@@ -529,7 +507,7 @@ details[open] .big-box {
 
     .tag {
         font-size: 10px;
-        /* Adjust font size for tags */
+
     }
 
     .task-input {
@@ -566,7 +544,6 @@ details[open] .big-box {
     .icon {
         position: absolute;
         left: 105px;
-        /* Adjust the left position as needed */
         transform: translateY(-50%);
         color: #5f958c;
         z-index: 2;
