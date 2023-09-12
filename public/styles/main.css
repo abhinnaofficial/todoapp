@@ -368,6 +368,10 @@ details[open] .big-box {
         margin-left: 10px;
     }
 
+    body {
+        background-size: cover;
+    }
+
     .big-box {
         padding: 20px;
         /* Decrease padding for smaller screens */
@@ -391,6 +395,10 @@ details[open] .big-box {
     .task-name {
         font-size: 18px;
         /* Adjust font size for task names */
+    }
+
+    .task-boxes {
+        width: fit-content;
     }
 
     .task-container {
@@ -455,6 +463,10 @@ details[open] .big-box {
         margin-left: 15px;
     }
 
+    body {
+        background-size: cover;
+    }
+
     .big-box {
         padding: 15px;
         /* Decrease padding for smaller screens */
@@ -472,8 +484,10 @@ details[open] .big-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: auto;
+    }
 
+    .task-boxes {
+        width: fit-content;
     }
 
     .task-name {
