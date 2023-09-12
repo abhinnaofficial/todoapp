@@ -456,7 +456,7 @@ details[open] .big-box {
 
 
 /* Media query for mobile devices */
-@media screen ad (min-device-width : 320px) and (max-width: 490px) {
+@media screen and (min-device-width : 320px) and (max-width: 490px) {
 
     /* Adjust your styles here */
     h1 {
@@ -553,7 +553,7 @@ details[open] .big-box {
 
     .icon {
         position: absolute;
-        top: 48%;
+        top: 42%;
         left: 105px;
         /* Adjust the left position as needed */
         transform: translateY(-50%);
