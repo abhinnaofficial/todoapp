@@ -15,8 +15,8 @@ h1 {
 }
 
 p {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 100;
+    font-family: 'Sans', sans-serif;
+    font-weight: lighter;
     user-select: none;
     margin-left: 35px;
 
@@ -378,6 +378,7 @@ details[open] .big-box {
         width: auto;
         position: relative;
 
+
     }
 
     .task-box {
@@ -393,16 +394,18 @@ details[open] .big-box {
     }
 
     .task-container {
-        width: 350px;
+        width: 270px;
         /* Expand task container to full width for better spacing */
     }
 
     .taskbutton {
-        margin-left: 0;
-        /* Remove margin-left to keep the button on the left edge */
-        position: absolute;
-        top: 150px;
-        left: 30px;
+        margin-right: 12px;
+        margin-bottom: -80px;
+        margin-left: 20px;
+        cursor: pointer;
+        display: inline-block;
+        width: 100px;
+        height: 40px;
     }
 
     .tag {
@@ -410,17 +413,6 @@ details[open] .big-box {
         /* Adjust font size for tags */
     }
 
-    .prioritybutton {
-        font-size: 12px;
-        /* Adjust font size for priority button */
-    }
-
-    .icon {
-        left: 80px;
-        /* Adjust the icon's left position */
-        font-size: 20px;
-        /* Adjust icon's font size */
-    }
 
     .delete-form {
         display: inline-block;
@@ -428,12 +420,31 @@ details[open] .big-box {
 
     }
 
+    .dropdown-content {
+        left: 100px;
+        top: 130px;
+
+    }
+
+    .icon {
+        position: absolute;
+
+        left: 105px;
+        /* Adjust the left position as needed */
+        transform: translateY(-50%);
+        color: #5f958c;
+        z-index: 2;
+        font-size: 24px;
+        pointer-events: none;
+    }
+
+
     /* ... other adjustments ... */
 }
 
 
 /* Media query for mobile devices */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
 
     /* Adjust your styles here */
     h1 {
@@ -456,6 +467,7 @@ details[open] .big-box {
 
     }
 
+
     .task-box {
         display: flex;
         justify-content: space-between;
@@ -475,11 +487,13 @@ details[open] .big-box {
     }
 
     .taskbutton {
-        margin-left: 0;
-        /* Remove margin-left to keep the button on the left edge */
-        position: absolute;
-        top: 150px;
-        left: 30px;
+        margin-right: 12px;
+        margin-bottom: -80px;
+        margin-left: 20px;
+        cursor: pointer;
+        display: inline-block;
+        width: 100px;
+        height: 40px;
     }
 
     .tag {
@@ -487,21 +501,46 @@ details[open] .big-box {
         /* Adjust font size for tags */
     }
 
-    .prioritybutton {
-        font-size: 12px;
-        /* Adjust font size for priority button */
+    .task-input {
+        border-radius: 10px;
+        width: 100px;
+        height: 25px;
+        background-color: rgb(241, 255, 255);
     }
 
-    .icon {
-        left: 80px;
-        /* Adjust the icon's left position */
-        font-size: 20px;
-        /* Adjust icon's font size */
+    .form {
+        width: 341px;
     }
+
+    .taginput {
+        border-radius: 10px;
+        height: 20px;
+        width: 60px;
+        background-color: rgb(241, 255, 255);
+    }
+
+
+    .dropdown-content {
+        width: 348px;
+    }
+
 
     .delete-form {
         display: inline-block;
         margin-right: 15px;
 
     }
+
+    .icon {
+        position: absolute;
+        top: 48%;
+        left: 105px;
+        /* Adjust the left position as needed */
+        transform: translateY(-50%);
+        color: #5f958c;
+        z-index: 2;
+        font-size: 24px;
+        pointer-events: none;
+    }
+
 }
