@@ -453,6 +453,11 @@ details[open] .big-box {
         width: 0px;
     }
 
+
+    .material-symbols-outlined {
+        margin-left: -18px;
+    }
+
     /* ... other adjustments ... */
 }
 
@@ -472,6 +477,10 @@ details[open] .big-box {
     summary {
         list-style: none !important;
         width: 0px;
+    }
+
+    .material-symbols-outlined {
+        margin-left: -18px;
     }
 
 
