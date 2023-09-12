@@ -510,7 +510,7 @@ details[open] .big-box {
     .taskbutton {
         margin-right: 12px;
         margin-bottom: -80px;
-        margin-left: 90px;
+        margin-left: 100px;
         cursor: pointer;
         display: inline-block;
         width: 100px;
@@ -555,7 +555,7 @@ details[open] .big-box {
 
     .icon {
         position: absolute;
-        top: 41%;
+        top: 40.5%;
         left: 105px;
         /* Adjust the left position as needed */
         transform: translateY(-50%);
