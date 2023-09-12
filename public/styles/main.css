@@ -446,6 +446,10 @@ details[open] .big-box {
         pointer-events: none;
     }
 
+    summary {
+        list-style: none;
+        width: 0px;
+    }
 
     /* ... other adjustments ... */
 }
@@ -463,6 +467,10 @@ details[open] .big-box {
         margin-left: 15px;
     }
 
+    summary {
+        list-style: none;
+        width: 0px;
+    }
 
 
     .big-box {
